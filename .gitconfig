@@ -1,0 +1,12 @@
+[user]
+	email = e11906270@student.tuwien.ac.at
+	name = Alexander Heinisch
+[alias]
+	s = status -sb
+	l = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -m
+	rv = remote -v
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	po = push -u origin HEAD
+
