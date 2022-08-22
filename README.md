@@ -22,3 +22,11 @@ brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font
 ```
 
 Open the terminal and select the font under Terminal -> Preferences -> Profiles
+
+Install tide by using fisher:
+
+```
+fisher install IlanCosman/tide@v5
+```
+
+Go through the
