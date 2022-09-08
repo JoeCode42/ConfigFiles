@@ -41,3 +41,5 @@ set -u tide_left_prompt_items os pwd git
 fisher install jethrokuan/z
 ```
 
+## Copy configs from repo into .config
+
