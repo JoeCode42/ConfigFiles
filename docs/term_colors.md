@@ -33,12 +33,12 @@
 
 # Window
 
-Transparency:                   6 (/100)
-Keep background colors opaque:  true
-Blur:                           off
+- Transparency:                   6 (/100)
+- Keep background colors opaque:  true
+- Blur:                           off
 
 # Text
 ## Font
 
-Font:       MesloLGL Nerd Font Mono (Regular)
-Font Size:  12 (Anti-aliased)
+- Font:       MesloLGL Nerd Font Mono (Regular)
+- Font Size:  12 (Anti-aliased)
