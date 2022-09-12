@@ -1,3 +1,18 @@
+-- bootstrapping packer to install it on new systems aswell
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+-- load packer
 local status, packer = pcall(require, "packer")
 if (not status) then
 	print('Packer is not installed')
@@ -32,7 +47,10 @@ packer.startup(function(use)
     -- misc plugins for comfort
     use 'norcalli/nvim-colorizer.lua'   -- shows colors codes in files as their actual color
     use 'windwp/nvim-autopairs'         -- automatically places the closing pair
-    use 'windwp/nvim-ts-autotag'        -- treesitter supported tag renaming (rename both xml tags at once)
+    use {
+        'windwp/nvim-ts-autotag',       -- treesitter supported tag renaming (rename both xml tags at once)
+        requires = 'nvim-treesitter/nvim-treesitter'
+    }
 
     -- treesitter highlighting
     use {
@@ -53,4 +71,8 @@ packer.startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+
+    if packer_bootstrap then
+        packer.sync()
+    end
 end)
