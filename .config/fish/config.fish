@@ -22,6 +22,11 @@ alias g git
 alias vim nvim
 set -gx EDITOR nvim
 
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
+
 ##### PATHS #####
 
 set -gx EDITOR nvim
