@@ -23,7 +23,7 @@ alias vim nvim
 set -gx EDITOR nvim
 
 if type -q exa
-  alias ll "exa -l -g --icons"
+  alias ll "exa -l -g --icons --group-directories-first"
   alias lla "ll -a"
 end
 
