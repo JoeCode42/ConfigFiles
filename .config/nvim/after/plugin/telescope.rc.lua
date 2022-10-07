@@ -22,8 +22,8 @@ telescope.setup({
             '.git/',
             '__pycache__',
             '.pytest_cache',
-            '.venv/',
-            '*.egg-info/'
+            '.venv',
+            '*.egg-info'
         }
     },
     extensions = {
