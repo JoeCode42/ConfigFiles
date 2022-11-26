@@ -47,4 +47,4 @@ config folder (typically at '~/.config/fish')
 
 ## Set fish as defauklt shell
 
-sudo chsh -s /bin/fish
+sudo chsh -s /usr/bin/fish
