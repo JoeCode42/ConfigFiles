@@ -3,6 +3,8 @@
 ## Install Fish Shell
 
 ```
+sudo add ppa:fish-shell/release-3
+sudo apt update
 sudo apt install fish
 ```
 
@@ -42,3 +44,7 @@ set -u tide_left_prompt_items os pwd git
 
 You are now ready to go, simply copy the config files from the '.fish' folder into your local
 config folder (typically at '~/.config/fish')
+
+## Set fish as defauklt shell
+
+sudo chsh -s /bin/fish
