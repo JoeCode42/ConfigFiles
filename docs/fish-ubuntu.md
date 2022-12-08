@@ -3,7 +3,7 @@
 ## Install Fish Shell
 
 ```
-sudo apt add ppa:fish-shell/release-3
+sudo add-apt-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
 ```
@@ -15,6 +15,9 @@ A nerdfont is needed to display all the icons and symbols used:
 download font from -> https://www.nerdfonts.com/font-downloads
 unzip font
 sudo cp -r ~/Downloads/<FontDirectory> /usr/share/fonts/truetype/<FontDirectory>
+
+On desktop PC -> go to console preferences and change the font 
+
 
 Peco is used for quick directory switching and a better command history:
 ```
@@ -46,5 +49,11 @@ You are now ready to go, simply copy the config files from the '.fish' folder in
 config folder (typically at '~/.config/fish')
 
 ## Set fish as defauklt shell
+On desktop pc ->
+```
+sudo chsh -s /usr/bin/fish 
+```
+On server for ssh logins-> (lead to vsc ssh crashes!!!)
+edit /etc/passwd and change the shell of the user 
 
-sudo chsh -s /usr/bin/fish
+
